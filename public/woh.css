@@ -1,0 +1,193 @@
+@font-face {
+	font-family: Chalkduster;
+	src: url('Chalkduster.ttf');
+}
+
+body {
+	width: 100%;
+	background: rgb(49,49,49);
+	padding-top: 10px;
+	font-family: Chalkduster;
+	font-size: 12px;
+	text-align: center;
+	color: white;
+}
+
+p {
+	margin: 0 auto;
+}
+
+#title {
+	font-size: 50px;
+}
+
+#wrapper {
+	margin: 0 auto;
+}
+
+#board {
+	margin: 0 auto;
+	margin-top: -50px;
+	padding: 0px;
+	padding-top: 70px;
+	padding-left: 50px;
+	width: 750px;
+	height: 530px;
+	background-image: url('wallofhope-board.png');
+}
+
+.sticky {
+	margin: 0;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding: 10px;
+	padding-top: 20px;
+
+	width: 180px;
+	height: 170px;
+	
+	background-repeat: no-repeat;
+	float: left;
+	text-align: left;
+}
+
+.sticky:hover {
+	/* Safari & Chrome */
+	-webkit-transform: rotate(5deg);
+
+	/* Firefox */
+	-moz-transform: rotate(5deg);
+
+	/* IE */
+	-ms-transform: rotate(5deg);
+
+	/* Opera */
+	-o-transform: rotate(5deg);
+}
+
+#sticky-yellow {
+	background-image: url('wallofhope-sticky-yellow.png');
+}
+
+#sticky-blue {
+	background-image: url('wallofhope-sticky-blue.png');
+}
+
+#sticky-pink {
+	background-image: url('wallofhope-sticky-pink.png');
+}
+
+#sticky-green {
+	background-image: url('wallofhope-sticky-green.png');
+}
+
+#sticky-orange {
+	background-image: url('wallofhope-sticky-orange.png');
+}
+
+.sticky-text {
+	font-family: Chalkduster;
+	font-size: 12px;
+	color: black;
+	word-break: hyphenate;
+}
+
+#sticky-text-yellow {
+	padding: 10px;
+	padding-top: 15px;
+	padding-right: 30px;
+	
+	/* Safari & Chrome */
+	-webkit-transform: rotate(-9deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-9deg);
+
+	/* IE */
+	-ms-transform: rotate(-9deg);
+
+	/* Opera */
+	-o-transform: rotate(-9deg);
+}
+
+
+#sticky-text-blue {
+	padding: 15px;
+	padding-top: 15px;
+	padding-right: 30px;
+	
+	/* Safari & Chrome */
+	-webkit-transform: rotate(1deg);
+
+	/* Firefox */
+	-moz-transform: rotate(1deg);
+
+	/* IE */
+	-ms-transform: rotate(1deg);
+
+	/* Opera */
+	-o-transform: rotate(1deg);
+}
+
+#sticky-text-pink {
+	padding: 17px;
+	padding-top: 15px;
+	padding-right: 30px;
+	
+	/* Safari & Chrome */
+	-webkit-transform: rotate(5deg);
+
+	/* Firefox */
+	-moz-transform: rotate(5deg);
+
+	/* IE */
+	-ms-transform: rotate(5deg);
+
+	/* Opera */
+	-o-transform: rotate(5deg);
+}
+
+#sticky-text-green {
+	padding: 7px;
+	padding-top: 15px;
+	padding-right: 30px;
+	
+	/* Safari & Chrome */
+	-webkit-transform: rotate(-6deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-6deg);
+
+	/* IE */
+	-ms-transform: rotate(-6deg);
+
+	/* Opera */
+	-o-transform: rotate(-6deg);
+}
+
+#sticky-text-orange {
+	padding: 15px;
+	padding-top: 15px;
+	padding-right: 30px;
+	
+	/* Safari & Chrome */
+	-webkit-transform: rotate(1deg);
+
+	/* Firefox */
+	-moz-transform: rotate(1deg);
+
+	/* IE */
+	-ms-transform: rotate(1deg);
+
+	/* Opera */
+	-o-transform: rotate(1deg);
+}
+
+#share {
+	margin: 0;
+	padding: 20px;
+	width: 300px;
+	//height: 150px;
+	float: left;
+	text-align: center;
+}
