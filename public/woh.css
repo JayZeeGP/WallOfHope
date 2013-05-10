@@ -18,22 +18,24 @@ p {
 }
 
 #title {
-	font-size: 50px;
+	font-size: 40px;
+	margin-bottom: 15px;
 }
 
 #wrapper {
 	margin: 0 auto;
 }
 
-#board {
+#stickies {
 	margin: 0 auto;
-	margin-top: -50px;
 	padding: 0px;
-	padding-top: 70px;
+	padding-top: 20px;
 	padding-left: 50px;
 	width: 750px;
 	height: 530px;
 	background-image: url('wallofhope-board.png');
+	
+	z-index:-1;
 }
 
 .sticky {
@@ -184,10 +186,38 @@ p {
 }
 
 #share {
-	margin: 0;
+	margin: 0 auto;
 	padding: 20px;
-	width: 300px;
-	//height: 150px;
-	float: left;
-	text-align: center;
+}
+
+#chalkboard {
+	margin: 0 auto;
+
+	padding-top: 20px;
+	width: 370px;
+	height: 180px;
+
+	background-image: url('chalkboard.png');
+	background-repeat: no-repeat;
+	
+	z-index: 1;
+}
+
+#message {
+	margin-top: 10px;
+	
+	width: 320px;
+	height: 65px;
+	
+	font-family: Chalkduster;
+	color: #FFFFFF;
+	
+	background: transparent;
+	border: none;
+	resize: none;
+}
+
+textarea:focus, textarea:hover {
+	border:none;
+	outline: 0;
 }
