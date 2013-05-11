@@ -28,8 +28,8 @@
       //var msg = $('<div class="msg"></div>')
         //.append('<span class="name">' + name + '</span>: ')
         //.append('<span class="text">' + data.msg + '</span>');
-      var msg = $('<div class="sticky" id="sticky-blue">')
-        .append('<div class="sticky-text" id="sticky-text-blue">Before I die I want to... ' + data.msg)
+      var msg = $('<div class="sticky" id="sticky-yellow">')
+        .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
         .append('</div></div>');
             
       $('#stickies')
