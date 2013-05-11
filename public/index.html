@@ -27,7 +27,21 @@
 	<div id="chalkboard">
 		<div id="title">Wall of Hope</div>
 		Before I die I want to...
-		<textarea id="message" autofocus></textarea>
+		<form name="sticky-form">
+			<textarea id="message" maxlength="140-18" autofocus></textarea>
+			<div class="radio">
+				<input id="yellow" type="radio" name="color" value="yellow" checked="true">
+    			<label for="yellow" id="yellow-label"></label>
+    			<input id="orange" type="radio" name="color" value="orange">
+    			<label for="orange" id="orange-label"></label>
+    			<input id="green" type="radio" name="color" value="green">
+    			<label for="green" id="green-label"></label>
+    			<input id="pink" type="radio" name="color" value="pink">
+    			<label for="pink" id="pink-label"></label>
+    			<input id="blue" type="radio" name="color" value="blue">
+    			<label for="blue" id="blue-label"></label>
+			</div>
+		</form>
     </div>
 	<div id="stickies">
 	</div>
@@ -35,5 +49,20 @@
 			SHARE<br><br>"A bunch of logos goes here".
 	</div>
 </div>
+
+
+		<div id="chalk-colors">
+			<div id="chalk-blue" class="chalk">
+			</div>
+			<div id="chalk-pink" class="chalk">
+			</div>
+			<div id="chalk-green" class="chalk">
+			</div>
+			<div id="chalk-orange" class="chalk">
+			</div>
+			<div id="chalk-yellow" class="chalk">
+			</div>
+		</div>
+
 </body>
 </html>

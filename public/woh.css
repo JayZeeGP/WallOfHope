@@ -19,7 +19,7 @@ p {
 
 #title {
 	font-size: 40px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 #wrapper {
@@ -89,7 +89,7 @@ p {
 
 .sticky-text {
 	font-family: Chalkduster;
-	font-size: 12px;
+	font-size: 10px;
 	color: black;
 	word-break: hyphenate;
 }
@@ -97,7 +97,7 @@ p {
 #sticky-text-yellow {
 	padding: 10px;
 	padding-top: 15px;
-	padding-right: 30px;
+	padding-right: 35px;
 	
 	/* Safari & Chrome */
 	-webkit-transform: rotate(-9deg);
@@ -204,9 +204,10 @@ p {
 }
 
 #message {
-	margin-top: 10px;
+	margin-top: 5px;
+	margin-right: 0px;
 	
-	width: 320px;
+	width: 310px;
 	height: 65px;
 	
 	font-family: Chalkduster;
@@ -215,9 +216,153 @@ p {
 	background: transparent;
 	border: none;
 	resize: none;
+	
+	//float: left;
 }
 
 textarea:focus, textarea:hover {
-	border:none;
+	border: none;
 	outline: 0;
+}
+
+#chalk-colors {
+	margin: 0px;
+	padding: 0px;
+	margin-top: -2px;
+	margin-right: 20px;
+	//float: right;
+}
+
+.chalk:hover {
+	cursor:pointer
+}
+
+#chalk-blue {
+	width: 25px;
+	height: 25px;
+
+	background-image: url('chalk-blue.png');
+	background-repeat: no-repeat;
+	
+	float: right;
+}
+
+#chalk-blue:hover {
+	background-image: url('chalk-selected.png');
+	background-repeat: no-repeat;
+}
+
+#chalk-pink {
+	width: 25px;
+	height: 25px;
+
+	background-image: url('chalk-pink.png');
+	background-repeat: no-repeat;
+	
+	float: right;
+}
+
+#chalk-pink:hover {
+	background-image: url('chalk-selected.png');
+	background-repeat: no-repeat;
+}
+
+#chalk-green {
+	width: 25px;
+	height: 25px;
+
+	background-image: url('chalk-green.png');
+	background-repeat: no-repeat;
+	
+	float: right;
+}
+
+#chalk-green:hover {
+	background-image: url('chalk-selected.png');
+	background-repeat: no-repeat;
+}
+
+#chalk-orange {
+	width: 25px;
+	height: 25px;
+
+	background-image: url('chalk-orange.png');
+	background-repeat: no-repeat;
+	
+	float: right;
+}
+
+#chalk-orange:hover {
+	background-image: url('chalk-selected.png');
+	background-repeat: no-repeat;
+}
+
+#chalk-yellow {
+	width: 25px;
+	height: 25px;
+
+	background-image: url('chalk-yellow.png');
+	background-repeat: no-repeat;
+	
+	float: right;
+}
+
+#chalk-yellow:hover {
+	background-image: url('chalk-selected.png');
+	background-repeat: no-repeat;
+}
+
+.radio {
+	float: right;
+	margin-right: 50px;
+	margin-top: -20px;
+}
+
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;
+    margin: -3px;
+} 
+
+input[type=radio] {  
+    display: none;  
+}
+
+#yellow-label:before {background-image: url('chalk-yellow.png');}
+#orange-label:before {background-image: url('chalk-orange.png');}
+#green-label:before {background-image: url('chalk-green.png');}
+#pink-label:before {background-image: url('chalk-pink.png');}
+#blue-label:before {background-image: url('chalk-blue.png');}
+
+label:before {  
+    content: "";  
+    display: inline-block;  
+  
+    width: 25px;  
+    height: 25px;  
+    
+    position: absolute;  
+}
+
+input[type=radio]:checked + #yellow-label:before {
+    background-image: url('chalk-selected.png'), url('chalk-yellow.png');  
+}
+
+input[type=radio]:checked + #orange-label:before {
+    background-image: url('chalk-selected.png'), url('chalk-orange.png');  
+}
+
+input[type=radio]:checked + #green-label:before {
+    background-image: url('chalk-selected.png'), url('chalk-green.png');  
+}
+
+input[type=radio]:checked + #pink-label:before {
+    background-image: url('chalk-selected.png'), url('chalk-pink.png');  
+}
+
+
+input[type=radio]:checked + #blue-label:before {
+    background-image: url('chalk-selected.png'), url('chalk-blue.png');  
 }
