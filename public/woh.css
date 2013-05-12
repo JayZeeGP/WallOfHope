@@ -76,7 +76,7 @@ p {
 	background-image: url('wallofhope-sticky-blue-pin.png');
 }
 
-#sticky-yellow:hover {
+#sticky-blue:hover {
 	background-image: url('wallofhope-sticky-blue-pin2.png');
 }
 
@@ -84,7 +84,7 @@ p {
 	background-image: url('wallofhope-sticky-pink-pin.png');
 }
 
-#sticky-yellow:hover {
+#sticky-pink:hover {
 	background-image: url('wallofhope-sticky-pink-pin2.png');
 }
 
@@ -92,7 +92,7 @@ p {
 	background-image: url('wallofhope-sticky-green-pin.png');
 }
 
-#sticky-yellow:hover {
+#sticky-green:hover {
 	background-image: url('wallofhope-sticky-green-pin2.png');
 }
 
@@ -100,7 +100,7 @@ p {
 	background-image: url('wallofhope-sticky-orange-pin.png');
 }
 
-#sticky-yellow:hover {
+#sticky-orange:hover {
 	background-image: url('wallofhope-sticky-orange-pin2.png');
 }
 
