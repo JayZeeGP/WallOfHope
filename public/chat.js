@@ -28,11 +28,8 @@
       //var msg = $('<div class="msg"></div>')
         //.append('<span class="name">' + name + '</span>: ')
         //.append('<span class="text">' + data.msg + '</span>');
-        
-    	var color = 'yellow'; //Hay que capturar el color y asignarlo aquí
-    	
-      	var msg = $('<div class="sticky" id="sticky-'+color+'" onClick="showMenu();">')
-        .append('<div class="sticky-text">Before I die I want to... ' + data.msg)
+      var msg = $('<div class="sticky" id="sticky-'+data.color+'">')
+        .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
         .append('</div></div>');
             
       $('#stickies')
@@ -45,7 +42,8 @@
     send : function() {
       this.socket.emit('msg', {
         //name: $('#name').val(),
-        msg: $('#message').val()
+        msg: $('#message').val(),
+        color: $('input:radio[name=color]:checked').val()
       });
 
       $('#message').val('');
