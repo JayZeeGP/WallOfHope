@@ -73,19 +73,35 @@ p {
 }
 
 #sticky-blue {
-	background-image: url('wallofhope-sticky-blue.png');
+	background-image: url('wallofhope-sticky-blue-pin.png');
+}
+
+#sticky-yellow:hover {
+	background-image: url('wallofhope-sticky-blue-pin2.png');
 }
 
 #sticky-pink {
-	background-image: url('wallofhope-sticky-pink.png');
+	background-image: url('wallofhope-sticky-pink-pin.png');
+}
+
+#sticky-yellow:hover {
+	background-image: url('wallofhope-sticky-pink-pin2.png');
 }
 
 #sticky-green {
-	background-image: url('wallofhope-sticky-green.png');
+	background-image: url('wallofhope-sticky-green-pin.png');
+}
+
+#sticky-yellow:hover {
+	background-image: url('wallofhope-sticky-green-pin2.png');
 }
 
 #sticky-orange {
-	background-image: url('wallofhope-sticky-orange.png');
+	background-image: url('wallofhope-sticky-orange-pin.png');
+}
+
+#sticky-yellow:hover {
+	background-image: url('wallofhope-sticky-orange-pin2.png');
 }
 
 .sticky-text {
