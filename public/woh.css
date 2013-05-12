@@ -6,7 +6,7 @@
 body {
 	width: 100%;
 	background: rgb(49,49,49);
-	padding-top: 10px;
+	padding-top: 5px;
 	font-family: Chalkduster;
 	font-size: 12px;
 	text-align: center;
@@ -15,15 +15,18 @@ body {
 
 p {
 	margin: 0 auto;
+	margin-top: 5px;
 }
 
 #title {
-	font-size: 40px;
-	margin-bottom: 5px;
+	font-size: 50px;
+	margin-bottom: 10px;
+	float: left;
 }
 
 #wrapper {
 	margin: 0 auto;
+	width: 900px;
 }
 
 #stickies {
@@ -54,21 +57,19 @@ p {
 }
 
 .sticky:hover {
-	/* Safari & Chrome */
-	-webkit-transform: rotate(5deg);
-
-	/* Firefox */
+/*	-webkit-transform: rotate(5deg);
 	-moz-transform: rotate(5deg);
-
-	/* IE */
 	-ms-transform: rotate(5deg);
-
-	/* Opera */
-	-o-transform: rotate(5deg);
+	-o-transform: rotate(5deg);*/
+	cursor: pointer;
 }
 
 #sticky-yellow {
-	background-image: url('wallofhope-sticky-yellow.png');
+	background-image: url('wallofhope-sticky-yellow-pin.png');
+}
+
+#sticky-yellow:hover {
+	background-image: url('wallofhope-sticky-yellow-pin2.png');
 }
 
 #sticky-blue {
@@ -92,24 +93,22 @@ p {
 	font-size: 10px;
 	color: black;
 	word-break: hyphenate;
-}
-
-#sticky-text-yellow {
+	
 	padding: 10px;
 	padding-top: 15px;
 	padding-right: 35px;
 	
 	/* Safari & Chrome */
-	-webkit-transform: rotate(-9deg);
+	-webkit-transform: rotate(-10deg);
 
 	/* Firefox */
-	-moz-transform: rotate(-9deg);
+	-moz-transform: rotate(-10deg);
 
 	/* IE */
-	-ms-transform: rotate(-9deg);
+	-ms-transform: rotate(-10deg);
 
 	/* Opera */
-	-o-transform: rotate(-9deg);
+	-o-transform: rotate(-10deg);
 }
 
 
@@ -194,10 +193,10 @@ p {
 	margin: 0 auto;
 
 	padding-top: 20px;
-	width: 370px;
-	height: 180px;
+	width: 700px;
+	height: 170px;
 
-	background-image: url('chalkboard.png');
+	//background-image: url('chalkboard.png');
 	background-repeat: no-repeat;
 	
 	z-index: 1;
@@ -207,15 +206,23 @@ p {
 	margin-top: 5px;
 	margin-right: 0px;
 	
+	padding: 10px;
+	
 	width: 310px;
-	height: 65px;
+	height: 60px;
 	
 	font-family: Chalkduster;
 	color: #FFFFFF;
 	
-	background: transparent;
+	background: #444;
 	border: none;
 	resize: none;
+	
+	-webkit-box-shadow: inset 2px 2px 2px 2px #333;
+	-moz-box-shadow: inset 2px 2px 2px 2px #333;
+	box-shadow: inset 2px 2px 2px 2px #333;
+	
+	border-radius: 10px;
 	
 	//float: left;
 }
@@ -228,7 +235,7 @@ textarea:focus, textarea:hover {
 #chalk-colors {
 	margin: 0px;
 	padding: 0px;
-	margin-top: -2px;
+	margin-top: 10px;
 	margin-right: 20px;
 	//float: right;
 }
@@ -237,85 +244,10 @@ textarea:focus, textarea:hover {
 	cursor:pointer
 }
 
-#chalk-blue {
-	width: 25px;
-	height: 25px;
-
-	background-image: url('chalk-blue.png');
-	background-repeat: no-repeat;
-	
-	float: right;
-}
-
-#chalk-blue:hover {
-	background-image: url('chalk-selected.png');
-	background-repeat: no-repeat;
-}
-
-#chalk-pink {
-	width: 25px;
-	height: 25px;
-
-	background-image: url('chalk-pink.png');
-	background-repeat: no-repeat;
-	
-	float: right;
-}
-
-#chalk-pink:hover {
-	background-image: url('chalk-selected.png');
-	background-repeat: no-repeat;
-}
-
-#chalk-green {
-	width: 25px;
-	height: 25px;
-
-	background-image: url('chalk-green.png');
-	background-repeat: no-repeat;
-	
-	float: right;
-}
-
-#chalk-green:hover {
-	background-image: url('chalk-selected.png');
-	background-repeat: no-repeat;
-}
-
-#chalk-orange {
-	width: 25px;
-	height: 25px;
-
-	background-image: url('chalk-orange.png');
-	background-repeat: no-repeat;
-	
-	float: right;
-}
-
-#chalk-orange:hover {
-	background-image: url('chalk-selected.png');
-	background-repeat: no-repeat;
-}
-
-#chalk-yellow {
-	width: 25px;
-	height: 25px;
-
-	background-image: url('chalk-yellow.png');
-	background-repeat: no-repeat;
-	
-	float: right;
-}
-
-#chalk-yellow:hover {
-	background-image: url('chalk-selected.png');
-	background-repeat: no-repeat;
-}
-
 .radio {
 	float: right;
-	margin-right: 50px;
-	margin-top: -20px;
+	margin-right: 30px;
+	margin-top: -5px;
 }
 
 label {  
@@ -365,4 +297,41 @@ input[type=radio]:checked + #pink-label:before {
 
 input[type=radio]:checked + #blue-label:before {
     background-image: url('chalk-selected.png'), url('chalk-blue.png');  
+}
+
+#send {
+	display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    
+    margin-right: -40px;
+    margin-left: 70px;
+    height: 25px; 
+    
+	background: transparent;
+	border: none;
+	
+	font-family: Chalkduster;
+	color: #FFFFFF;
+	
+	float: right;
+	
+	-webkit-box-shadow: inset 0px 2px 2px 0px #777;
+	-moz-box-shadow: inset 0px 2px 2px 0px #777;
+	box-shadow: inset 0px 2px 2px 0px #777;
+	
+	border-radius: 10px;
+}
+
+#send:hover {
+	-webkit-box-shadow: inset 0px 2px 2px 0px #DDD;
+	-moz-box-shadow: inset 0px 2px 2px 0px #DDD;
+	box-shadow: inset 0px 2px 2px 0px #DDD;
+	
+	border-radius: 10px;
+}
+
+#form {
+	width: 320px;
+	float: right;
 }
