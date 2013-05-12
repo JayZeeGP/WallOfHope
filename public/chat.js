@@ -10,14 +10,14 @@
       $('#send').click(function() {
         Chat.send();
       });
-
+      /*
       $('#message').keyup(function(evt) {
         if ((evt.keyCode || evt.which) == 13) {
           Chat.send();
           return false;
         }
       });
-
+      */
       //Process any incoming messages
       this.socket.on('new', this.add);
     },
@@ -40,14 +40,16 @@
     //Sends a message to the server,
     //then clears it from the textarea
     send : function() {
-      this.socket.emit('msg', {
-        //name: $('#name').val(),
-        msg: $('#message').val(),
-        color: $('input:radio[name=color]:checked').val()
-      });
+      if($('#message').val()){
+        this.socket.emit('msg', {
+          //name: $('#name').val(),
+          msg: $('#message').val(),
+          color: $('input:radio[name=color]:checked').val()
+        });
 
-      $('#message').val('');
-      $('#message').focus();
+        $('#message').val('');
+        $('#message').focus();
+      }
     }
   };
 }());
