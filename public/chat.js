@@ -33,7 +33,7 @@
         .append('</div></div>');
             
       $('#stickies')
-        .append(msg)
+        .prepend(msg)
         .animate({scrollTop: $('#stickies').prop('scrollHeight')}, 0);
     },
 
