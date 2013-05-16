@@ -19,23 +19,6 @@
         //Chat.initialize('http://wallofhope.herokuapp.com/');
       });
 </script>
-<script type="text/javascript">
-function preload(images) {
-    if (document.images) {
-        var i = 0;
-        var imageArray = new Array();
-        imageArray = images.split(',');
-        var imageObj = new Image();
-        for(i=0; i<=imageArray.length-1; i++) {
-            //document.write('<img src="' + imageArray[i] + '" />');// Write to page (uncomment to check images)
-            imageObj.src=imageArray[i];
-        }
-    }
-}
-</script>
-<script type="text/javascript">
-preload('wallofhope-sticky-yellow-pin.png,wallofhope-sticky-yellow-pin2.png');
-</script>
 <body>
 <div id="wrapper">
 	<div id="chalkboard">
@@ -62,6 +45,7 @@ preload('wallofhope-sticky-yellow-pin.png,wallofhope-sticky-yellow-pin2.png');
     </div>
 	<div id="stickies">
 	</div>
+  <div id="preloader"></div>
 </div>
 </body>
 </html>

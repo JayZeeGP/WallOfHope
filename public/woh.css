@@ -24,6 +24,18 @@ p {
 	float: left;
 }
 
+#preloader {
+  /* la lista de imágenes a cargar */
+  background-image: url('wallofhope-sticky-yellow-pin.png');
+  background-image: url('wallofhope-sticky-yellow-pin2.png');
+  /* y ocultaremos todo */
+  height: 0px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: 0px;
+}
+
 #wrapper {
 	margin: 0 auto;
 	width: 900px;
