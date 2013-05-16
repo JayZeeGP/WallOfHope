@@ -19,10 +19,19 @@
         Chat.initialize('http://wallofhope.herokuapp.com/');
       });
 </script>
-    <!-- Importing Javascript -->
-    <!-- <script src="javascripts/jquery.js"></script>
-    <script src="javascripts/test.js"></script> -->
-<body>
+<script type="text/javascript">
+  function preCarga() { 
+    if (!document.images) return; 
+    var ar = new Array(); 
+    var arguments = preload.arguments; 
+    for (var i = 0; i < arguments.length; i++) { 
+      ar[i] = new Image(); 
+      ar[i].src = arguments[i]; 
+    } 
+  }
+</script>
+
+<body onLoad="preCarga ('wallofhope-sticky-yellow-pin.png','wallofhope-sticky-yellow-pin2.png')">
 <div id="wrapper">
 	<div id="chalkboard">
 		<div id="title">
