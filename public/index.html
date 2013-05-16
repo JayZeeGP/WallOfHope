@@ -24,7 +24,7 @@
     if (!document.images) return; 
     var ar = new Array(); 
     var arguments = preload.arguments; 
-    for (var i = 0; i < arguments.length; i++) { 
+    for (var i = 0; i < preload.length; i++) { 
       ar[i] = new Image(); 
       ar[i].src = arguments[i]; 
     } 
