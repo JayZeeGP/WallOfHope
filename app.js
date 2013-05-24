@@ -11,7 +11,6 @@ app.use("/", express.static(__dirname + '/public'));
 
 io.sockets.on('connection', function (socket) {
   numberOfUsers += 1;
-  io.sockets.emit('changeUserNo', numberOfUsers);
 
   socket.on('msg', function (data) {
     io.sockets.emit('new', data);
@@ -21,4 +20,6 @@ io.sockets.on('connection', function (socket) {
   	numberOfUsers -= 1;
     io.sockets.emit('changeUserNo', numberOfUsers);
   });
+
+    io.sockets.emit('changeUserNo', numberOfUsers);
 });
