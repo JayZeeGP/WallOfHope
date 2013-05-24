@@ -20,7 +20,7 @@
     add : function(data) {
       var msg = $('<div class="sticky" id="sticky-'+data.color+'">')
         .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
-        .append('</div><a href="https://twitter.com/share" class="twitter-hashtag-button" data-text="#BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" data-lang="en" target="_blank">Tweet</a></div>');
+        .append('</div><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script><a href="https://twitter.com/intent/tweet?text=%23BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" alt="Tweet" id="twitter"><img src="twitter.png" height="28px" alt="Tweet"/></a></div>');
 
       $('#stickies')
         .prepend(msg)

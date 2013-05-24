@@ -66,6 +66,8 @@ p {
 	background-repeat: no-repeat;
 	float: left;
 	text-align: left;
+	
+	position: relative;
 }
 
 .sticky:hover {
@@ -73,7 +75,7 @@ p {
 	-moz-transform: rotate(5deg);
 	-ms-transform: rotate(5deg);
 	-o-transform: rotate(5deg);*/
-	cursor: pointer;
+	//cursor: pointer;
 }
 
 #sticky-yellow {
@@ -361,5 +363,12 @@ input[type=radio]:checked + #blue-label:before {
 
 #form {
 	width: 320px;
+	float: right;
+}
+
+#twitter {
+	position: absolute;
+	right: 18px;
+	bottom: 42px;
 	float: right;
 }
