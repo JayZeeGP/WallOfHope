@@ -10,27 +10,18 @@
       $('#send').click(function() {
         Chat.send();
       });
-      /*
-      $('#message').keyup(function(evt) {
-        if ((evt.keyCode || evt.which) == 13) {
-          Chat.send();
-          return false;
-        }
-      });
-      */
+
       //Process any incoming messages
       this.socket.on('new', this.add);
+      this.socket.on('changeUserNo', this.changeNumberOfUsers);
     },
 
     //Adds a new message to the chat.
     add : function(data) {
       var msg = $('<div class="sticky" id="sticky-'+data.color+'">')
         .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
-        .append('</div><a href="https://twitter.com/share" class="twitter-hashtag-button" data-text="#BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" data-lang="en">Tweet</a></div>');
-        //.append('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
-        
+        .append('</div><a href="https://twitter.com/share" class="twitter-hashtag-button" data-text="#BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" data-lang="en" target="_blank">Tweet</a></div>');
 
-            
       $('#stickies')
         .prepend(msg)
         .animate({scrollTop: $('#stickies').prop('scrollHeight')}, 0);
@@ -49,6 +40,11 @@
         $('#message').val('');
         $('#message').focus();
       }
+    },
+
+    //Changes the number of users
+    changeNumberOfUsers : function(number) {
+      $('#counter').html("There are "+number+" motivators online");
     }
   };
 }());
