@@ -24,17 +24,17 @@
 
     //Adds a new message to the chat.
     add : function(data) {
-      //var name = data.name || 'anonymous';
-      //var msg = $('<div class="msg"></div>')
-        //.append('<span class="name">' + name + '</span>: ')
-        //.append('<span class="text">' + data.msg + '</span>');
       var msg = $('<div class="sticky" id="sticky-'+data.color+'">')
         .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
-        .append('</div></div>');
+        .append('</div><a href="https://twitter.com/share" class="twitter-hashtag-button" data-text="#BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" data-lang="en">Tweet</a></div>');
+        //.append('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+        
+
             
       $('#stickies')
         .prepend(msg)
         .animate({scrollTop: $('#stickies').prop('scrollHeight')}, 0);
+        $.getScript("http://platform.twitter.com/widgets.js");
     },
 
     //Sends a message to the server,
@@ -42,7 +42,6 @@
     send : function() {
       if($('#message').val()){
         this.socket.emit('msg', {
-          //name: $('#name').val(),
           msg: $('#message').val(),
           color: $('input:radio[name=color]:checked').val()
         });
