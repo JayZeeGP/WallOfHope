@@ -32,13 +32,11 @@
 
     //Adds life to a message
     addLife : function(id) {
-      alert("hola");
       this.socket.emit('addLife',id);
     },
 
     //Takes life from a message
     takeLife : function(id) {
-      alert("hola");
       this.socket.emit('takeLife',id);
     },
 
