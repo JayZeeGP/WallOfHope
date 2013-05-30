@@ -1,5 +1,7 @@
 //Create a Client module to use.
 (function () {
+  var canVote = true;
+  var voteMinutes = 2;
   window.Client = {
     socket : null,
     
@@ -32,14 +34,25 @@
 
     //Adds life to a message
     addLife : function(id) {
-      this.socket.emit('addLife',id);
+      if(canVote){
+        this.socket.emit('addLife',id);
+        canVote = false;
+        setTimeout(function(){canVote = true;},60000*voteMinutes);
+      }else{
+        alert("You can just vote once every "+ voteMinutes +" minutes");
+      }
     },
 
     //Takes life from a message
     takeLife : function(id) {
-      this.socket.emit('takeLife',id);
+      if(canVote){
+        this.socket.emit('takeLife',id);
+        canVote = false;
+        setTimeout(function(){canVote = true;},60000*voteMinutes);
+      }else{
+        alert("You can just vote once every "+ voteMinutes +" minutes");
+      }
     },
-
     //Sends a message to the server,
     //then clears it from the textarea
     send : function() {

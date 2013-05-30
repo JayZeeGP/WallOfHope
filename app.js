@@ -35,7 +35,7 @@ io.sockets.on('connection', function (socket) {
     for(i = 0; i<ids.length; i++){
       if(ids[i]==id){
         priorities[i]-=1;
-        console.log("Taken life to "+listOfPosts[i].msg);
+        console.log("Taken life from "+listOfPosts[i].msg);
         if(priorities[i]<=0){
           console.log("Delete: "+listOfPosts[i].msg);
           ids.splice(i,1);
