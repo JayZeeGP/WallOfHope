@@ -3,6 +3,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var numberOfUsers = 0;
+var ids = new Array();
 var listOfPosts = new Array();
 var priorities = new Array();
 var maximumSizeOfList = 4;
@@ -20,23 +21,43 @@ app.use("/", express.static(__dirname + '/public'));
 io.sockets.on('connection', function (socket) {
   numberOfUsers += 1;
 
-  socket.on('addLife', function (id) {
-    console.log("Add life to "+id);
+  socket.on('addLife', function (id) { 
+    for(i = 0; i<ids.length; i++){
+      if(ids[i]==id){
+        priorities[i]+=1;
+        console.log("Added life to "+listOfPosts[i].msg);
+        break;
+      }
+    }
   });
 
   socket.on('takeLife', function (id) {
-    console.log("Take life from "+id);
+    for(i = 0; i<ids.length; i++){
+      if(ids[i]==id){
+        priorities[i]-=1;
+        console.log("Taken life to "+listOfPosts[i].msg);
+        if(priorities[i]<=0){
+          console.log("Delete: "+listOfPosts[i].msg);
+          ids.splice(i,1);
+          listOfPosts.splice(i,1);
+          priorities.splice(i,1);
+          break;
+        }
+      }
+    }
   });
 
   socket.on('msg', function (data) {
   	if(listOfPosts.length == maximumSizeOfList){
   		listOfPosts.pop();
       priorities.pop();
+      ids.pop();
   	}
     data.id=id;
     id+=1;
   	listOfPosts.push(data);
     priorities.push(startingPriority);
+    ids.push(data.id);
     io.sockets.emit('new', data);
   });
 
@@ -63,6 +84,7 @@ function changePriorities(){
     console.log("New priority of "+listOfPosts[i].msg+" is "+priorities[i]);
     if(priorities[i] <= 0){ //Delete post
       console.log("Delete: "+listOfPosts[i].msg);
+      ids.splice(i,1);
       listOfPosts.splice(i,1);
       priorities.splice(i,1);
     }
