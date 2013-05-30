@@ -49,7 +49,6 @@ p {
 	width: 750px;
 	height: 530px;
 	background-image: url('wallofhope-board.png');
-	
 	z-index:-1;
 }
 
@@ -369,6 +368,20 @@ input[type=radio]:checked + #blue-label:before {
 #twitter {
 	position: absolute;
 	right: 18px;
+	bottom: 42px;
+	float: right;
+}
+
+#minus {
+	position: absolute;
+	right: 44px;
+	bottom: 42px;
+	float: right;
+}
+
+#plus {
+	position: absolute;
+	right: 68px;
 	bottom: 42px;
 	float: right;
 }

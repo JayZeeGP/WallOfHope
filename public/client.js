@@ -22,8 +22,8 @@
     add : function(data) {
       var msg = $('<div class="sticky" id="sticky-'+data.color+'">')
         .append('<div class="sticky-text" id="sticky-text-yellow">Before I die I want to... ' + data.msg)
-        .append('<input id="clickMe" type="button" value="+" onclick="Client.addLife('+ data.id +');" />')
-        .append('<input id="clickMe" type="button" value="-" onclick="Client.takeLife('+ data.id +');" />')        
+        .append('<input id="plus" type="button" value="+" onclick="Client.addLife('+ data.id +');" />')
+        .append('<input id="minus" type="button" value="-" onclick="Client.takeLife('+ data.id +');" />')        
         .append('</div><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script><a href="https://twitter.com/intent/tweet?text=%23BeforeIDieIWantTo '+data.msg+' via @TheWallOfHope" alt="Tweet" id="twitter"><img src="twitter.png" height="28px" alt="Tweet"/></a></div>');
 
       $('#stickies')
